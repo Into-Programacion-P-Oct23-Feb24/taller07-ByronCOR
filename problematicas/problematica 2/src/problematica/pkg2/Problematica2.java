@@ -18,11 +18,11 @@ public class Problematica2 {
         int suma = 2;
         int contador = 2;
         String cadena = "";
-        do {
+        while (contador <= 20){
             contador = contador + 2;
             cadena = String.format("%s\n %d", cadena, suma);
             suma = suma + contador;
-        } while (contador <= 20);
+        } 
         System.out.printf("%s\n", cadena);
 
     }
