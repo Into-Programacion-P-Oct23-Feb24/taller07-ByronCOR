@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package problematica5;
+package problematica.pkg4;
 
 /**
  *
- * @author LAB.ELECT
+ * @author Usuario
  */
-public class Problematica5 {
+public class Problematica4 {
 
     /**
      * @param args the command line arguments
@@ -23,17 +23,19 @@ public class Problematica5 {
         double total = 1;
         String signo;
         String cadena = "";
-        do {
+
+        while (denominador <= limite) {
             // para manejar el signo asociado 
             if (contador == 0) {
                 signo = "-";
-                fraccion = (-((double)numerador / denominador));
+                fraccion = (-((double) numerador / denominador));
                 contador = contador + 1;
             } else {
                 signo = "+";
                 contador = contador - 1;
-                fraccion = (+((double)numerador / denominador));
+                fraccion = (+((double) numerador / denominador));
             }
+
             cadena = String.format("%s%s %d/%d ",
                     cadena,
                     signo,
@@ -42,7 +44,8 @@ public class Problematica5 {
             total = total + fraccion;
             denominador = denominador + 2;
 
-        } while (denominador <= limite);
+        }
+
         System.out.printf("%d %s", contador, cadena);
         System.out.printf("\nEl resultado es: %.3f\n", total);
     }
